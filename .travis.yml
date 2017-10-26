@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  yarn: true
+  directories:
+  - node_modules
+notifications:
+  email: false
+script:
+- yarn test
+deploy:
+  provider: script
+  script: yarn deploy
+  skip_cleanup: true
+  on:
+    branch: master
+env:
+  global:
+  - EXP_USERNAME=inyono
+  # EXP_PASSWORD=[secret]
+  - secure: f1zc7OY/qDcg0qFHku+OOybm0gOAA2qXpfL+Oahx2eAcGXqKufH0jaHGZahyCrknaoHy5LDLAQgTsAywHv+THo7rBbewe+uWvDsym9+8/VRBACapZKlbEzZU4g8zehXD5QxlCOhfeLukgChTKqV06muWjgbKk3UQlL6+YwkpvMJhTcqz90VrGoVh/qsm8QWHSb6jyhoZZAWsPUvcHVSnxq2b+pqCEr3zEK7rXIEe+o5tOL63C95p/ah8wYD7+U8PbwueHG+P5iac9FWablK7vx6ZzuJU/Q2thp5PtIGB+hhFpPO5XEIigmDjD8r63vjZ+sG44PKo/acQS+boj/jeSFSA+grgn9usBnoqMe1Jx8OJWiCgSHQCCRORXfbFNmxRLD0rn+ux1uCJ/bWBMxvqBt/jKiZMYh8zyI24UZ11ibISSDZHZdhgfaQJvvOC32qx14pm1imb0kcBHQg0uZP8SBJ1PAuQ7IqzpSaxHQYrni4b+sT3vsaMrKaxcSf68zuzAacySd9l5DiKxtqz+Ah7skiWtpONgx+uOOuZQNWC27F9c730bkEpFM5p49MyM/UEtclPY5hAlVAqEjn4lKF9h1WRzP5T92aZhnzj/5u6G1cHZS4CN7upnUBSgpHsOUmkeoY+rwz6YF4tXrH+tgoyvhRqTRH5VhNl3w7nJNylXOw=

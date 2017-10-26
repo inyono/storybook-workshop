@@ -1,5 +1,11 @@
 {
   "expo": {
-    "sdkVersion": "21.0.0"
+    "name": "Storybook Workshop",
+    "slug": "storybook-workshop",
+    "sdkVersion": "21.0.0",
+    "version": "0.0.0",
+    "packagerOpts": {
+      "nonPersistent": true
+    }
   }
 }
