@@ -1,16 +1,25 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
+  "name": "storybook-workshop-web",
+  "version": "0.0.0",
+  "main": "./src/index.js",
+  "repository": "inyono/storybook-workshop",
+  "author": "Jonas Keinholz <jonas@keinholz.com>",
+  "license": "MIT",
+  "scripts": {
+    "format":
+      "prettier --write \"{{scripts,src,.storybook}/**/*,*}.{js,jsx,json,css}\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  },
+  "private": true
 }
