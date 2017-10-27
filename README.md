@@ -82,4 +82,4 @@ Pick tasks that intrigue you (or do something else entirely ;-) )
   * Use the [link addon](https://github.com/storybooks/storybook/tree/master/addons/links) to make links between the stories. With this, you could prototype the app flow in Storybook itself.
   * Check out the [addon library](https://storybook.js.org/addons/addon-gallery/) and try out any that interest you (**Note**. Many addons don't work in React Native Storybook, unfortunately)
 
-* Build a storybook for the included UI library (Semantic UI) resp. NativeBase)
+* Build a storybook for the included UI library (Semantic UI resp. NativeBase)
