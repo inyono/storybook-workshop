@@ -21,22 +21,23 @@
   },
   "dependencies": {
     "expo": "^21.0.0",
+    "native-base": "^2.3.3",
     "ramda": "^0.25.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/react-native": "^3.2.13",
     "cross-spawn": "^5.1.0",
     "exp": "^45.0.2",
     "jest-expo": "^21.0.2",
     "prettier": "^1.7.4",
-    "react-native-scripts": "1.5.0",
-    "react-test-renderer": "16.0.0-alpha.12",
-    "@storybook/react-native": "^3.2.13",
-    "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13",
+    "prop-types": "^15.6.0",
     "react-dom": "16.0.0-alpha.12",
-    "prop-types": "^15.6.0"
+    "react-native-scripts": "1.5.0",
+    "react-test-renderer": "16.0.0-alpha.12"
   },
   "private": true,
   "jest": {
