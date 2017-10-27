@@ -18,7 +18,12 @@ const App = () => (
           <Login onSubmit={username => history.push(`/app/${username}`)} />
         )}
       />
-      <Route path="/app/:username" component={Dashboard} />
+      <Route
+        path="/app/:username"
+        render={props => (
+          <Dashboard {...props} logout={() => props.history.push("/")} />
+        )}
+      />
     </Container>
   </NativeRouter>
 );

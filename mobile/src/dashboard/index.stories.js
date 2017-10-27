@@ -8,11 +8,21 @@ import DashboardContainer from ".";
 storiesOf("Dashboard", module)
   .add("Dashboard", () => (
     <MemoryRouter initialEntries={["/inyono"]} initialIndex={0}>
-      <Route path="/:username" component={DashboardContainer} />
+      <Route
+        path="/:username"
+        render={props => (
+          <DashboardContainer {...props} logout={action("logout")} />
+        )}
+      />
     </MemoryRouter>
   ))
   .add("Profile", () => (
     <MemoryRouter initialEntries={["/inyono/profile"]} initialIndex={0}>
-      <Route path="/:username" component={DashboardContainer} />
+      <Route
+        path="/:username"
+        render={props => (
+          <DashboardContainer {...props} logout={action("logout")} />
+        )}
+      />
     </MemoryRouter>
   ));

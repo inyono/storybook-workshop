@@ -8,8 +8,8 @@ const LoginForm = ({ error, value, onChange, onSubmit }) => (
       <NB.Body>
         <NB.Title>Storybook</NB.Title>
       </NB.Body>
-      <NB.Right onPress={onSubmit}>
-        <NB.Button transparent>
+      <NB.Right>
+        <NB.Button transparent onPress={onSubmit}>
           <NB.Icon name="arrow-forward" />
         </NB.Button>
       </NB.Right>

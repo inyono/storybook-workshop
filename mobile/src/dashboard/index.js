@@ -5,7 +5,7 @@ import { Route } from "react-router-native";
 import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 
-const DashboardContainer = ({ history, match, location }) => {
+const DashboardContainer = ({ history, match, location, logout }) => {
   const { pathname } = location;
   const { username } = match.params;
 
@@ -26,7 +26,7 @@ const DashboardContainer = ({ history, match, location }) => {
         />
         <Route
           path={`${match.url}/profile`}
-          render={() => <Profile username={username} />}
+          render={() => <Profile username={username} onLogout={logout} />}
         />
       </NB.Content>
       <NB.Footer>
