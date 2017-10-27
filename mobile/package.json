@@ -24,7 +24,8 @@
     "native-base": "^2.3.3",
     "ramda": "^0.25.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.48.4"
+    "react-native": "^0.48.4",
+    "react-router-native": "^4.2.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
