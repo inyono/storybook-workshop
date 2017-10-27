@@ -6,7 +6,8 @@
   "author": "Jonas Keinholz <jonas@keinholz.com>",
   "license": "MIT",
   "scripts": {
-    "deploy": "node scripts/nom-run-package.js deploy",
+    "postinstall": "node scripts/npm-run-package install",
+    "deploy": "node scripts/npm-run-package.js deploy",
     "test": "node scripts/npm-run-package.js test",
     "format":
       "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,jsx,json}\""

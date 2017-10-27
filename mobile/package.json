@@ -10,8 +10,7 @@
     "exp:config": "node scripts/generate-app-config.js",
     "exp:login": "exp login",
     "exp:publish": "exp publish",
-    "format":
-      "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,jsx,json}\"",
+    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,jsx,json}\"",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",

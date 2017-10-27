@@ -6,8 +6,7 @@
   "author": "Jonas Keinholz <jonas@keinholz.com>",
   "license": "MIT",
   "scripts": {
-    "format":
-      "prettier --write \"{{scripts,src,.storybook}/**/*,*}.{js,jsx,json,css}\"",
+    "format": "prettier --write \"{{scripts,src,.storybook}/**/*,*}.{js,jsx,json,css}\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
