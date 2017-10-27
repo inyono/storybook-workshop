@@ -1,10 +1,11 @@
 import { Container } from "native-base";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
+import * as NB from "native-base";
+import { NativeRouter, Route } from "react-router-native";
 
 import Login from "./login";
-import Dashboard from "./Dashboard";
+import Dashboard from "./dashboard";
 import { loadFonts } from "./utils";
 
 const App = () => (
@@ -14,15 +15,10 @@ const App = () => (
         exact
         path="/"
         render={({ history }) => (
-          <Login
-            onSubmit={username => history.push(`/dashboard/${username}`)}
-          />
+          <Login onSubmit={username => history.push(`/app/${username}`)} />
         )}
       />
-      <Route
-        path="/dashboard/:username"
-        render={({ match }) => <Dashboard username={match.params.username} />}
-      />
+      <Route path="/app/:username" component={Dashboard} />
     </Container>
   </NativeRouter>
 );
