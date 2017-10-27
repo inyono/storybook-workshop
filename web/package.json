@@ -6,13 +6,19 @@
   "author": "Jonas Keinholz <jonas@keinholz.com>",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write \"{{scripts,src,.storybook}/**/*,*}.{js,jsx,json,css}\"",
+    "deploy": "npm-run-all --sequential build:* deploy:*",
+    "deploy:app":
+      "netlify deploy --access-token $NETLIFY_TOKEN --site-id b37d0afc-b62b-4a4d-aee2-ec41c833fef7 --path build/",
+    "deploy:storybook":
+      "netlify deploy --access-token $NETLIFY_TOKEN --site-id adba80e5-3fd0-4558-b443-5357df7d06e5 --path storybook-static/",
+    "format":
+      "prettier --write \"{{scripts,src,.storybook}/**/*,*}.{js,jsx,json,css}\"",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:app": "react-scripts build",
+    "build:storybook": "build-storybook -s public",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "dependencies": {
     "react": "^16.0.0",
@@ -25,6 +31,8 @@
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-links": "^3.2.13",
     "@storybook/react": "^3.2.13",
+    "netlify-cli": "^1.2.2",
+    "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4"
   },
   "private": true

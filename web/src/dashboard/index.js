@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Segment, Menu } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 
 import games from "../games";
 import Dashboard from "./Dashboard";
@@ -11,30 +11,6 @@ const DashboardContainer = ({ history, match, location, logout }) => {
   const { pathname } = location;
   const { username } = match.params;
   const dashboardUrl = match.url;
-
-  //     </NB.Content>
-  //     <NB.Footer>
-  //       <NB.FooterTab>
-  //         <NB.Button
-  //           vertical
-  //           onPress={() => history.push(match.url)}
-  //           active={pathname === match.url}
-  //         >
-  //           <NB.Icon name="apps" />
-  //           <NB.Text>Dashboard</NB.Text>
-  //         </NB.Button>
-  //         <NB.Button
-  //           vertical
-  //           onPress={() => history.push(`${match.url}/profile`)}
-  //           active={pathname === `${match.url}/profile`}
-  //         >
-  //           <NB.Icon name="person" />
-  //           <NB.Text>Profile</NB.Text>
-  //         </NB.Button>
-  //       </NB.FooterTab>
-  //     </NB.Footer>
-  //   </NB.Container>
-  // );
 
   return (
     <div>

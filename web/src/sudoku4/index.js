@@ -49,9 +49,6 @@ const isCorrect = board => {
   );
 };
 
-const buttonStyle = { alignSelf: "center", margin: 10 };
-const textStyle = { padding: 10, width: 50, textAlign: "center" };
-
 const Sudoku4 = ({ state, setState, onGameOver }) => {
   const onChange = (i, j) => number => {
     const newState = [...state];
@@ -63,8 +60,6 @@ const Sudoku4 = ({ state, setState, onGameOver }) => {
       onGameOver();
     }
   };
-
-  // return null
 
   return (
     <Grid columns="equal">

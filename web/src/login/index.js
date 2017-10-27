@@ -13,13 +13,6 @@ class Login extends Component {
     this.setState({ submitted: true });
 
     if (!this.isValid()) {
-      // Toast.show({
-      //   text: "Please pick a username",
-      //   position: "bottom",
-      //   buttonText: "Okay",
-      //   type: "danger",
-      //   duration: 2500
-      // });
       return;
     }
 

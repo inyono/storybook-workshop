@@ -10,7 +10,8 @@
     "exp:config": "node scripts/generate-app-config.js",
     "exp:login": "exp login",
     "exp:publish": "exp publish",
-    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,jsx,json}\"",
+    "format":
+      "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,jsx,json}\"",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
@@ -32,6 +33,7 @@
     "@storybook/react-native": "^3.2.13",
     "cross-spawn": "^5.1.0",
     "exp": "^45.0.2",
+    "jest": "^21.2.1",
     "jest-expo": "^21.0.2",
     "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
