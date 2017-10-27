@@ -1,4 +1,5 @@
 import { AppLoading, Font } from "expo";
+import { Root } from "native-base";
 import React, { Component } from "react";
 
 export const loadFonts = C => {
@@ -23,7 +24,11 @@ export const loadFonts = C => {
         );
       }
 
-      return <C {...this.props} />;
+      return (
+        <Root>
+          <C {...this.props} />
+        </Root>
+      );
     }
   }
 

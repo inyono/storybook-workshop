@@ -12,34 +12,67 @@ import {
   Title,
   Button,
   Text,
-  Icon
+  Icon,
+  Toast
 } from "native-base";
 
-const Login = () => (
-  <Container>
-    <Header>
-      <Left />
-      <Body>
-        <Title>Storybook</Title>
-      </Body>
-      <Right>
-        <Button transparent>
-          <Icon name="arrow-forward" />
-        </Button>
-      </Right>
-    </Header>
-    <Content>
-      <Form>
-        <Item last>
-          <Icon active name='person' style={{ paddingTop: 5 }} />
-          <Input placeholder="Username" />
-        </Item>
-        <Button block style={{ margin: 15 }}>
-          <Text>Submit</Text>
-        </Button>
-      </Form>
-    </Content>
-  </Container>
-);
+class Login extends Component {
+  state = { username: "" };
+
+  isValid = () => {
+    return this.state.username !== "";
+  };
+
+  submit = () => {
+    this.setState({ submitted: true });
+
+    if (!this.isValid()) {
+      Toast.show({
+        text: "Please pick a username",
+        position: "bottom",
+        buttonText: "Okay"
+      });
+      return;
+    }
+
+    this.props.onSubmit(this.state.username);
+  };
+
+  render() {
+    const hasError = this.state.submitted && !this.isValid();
+
+    return (
+      <Container>
+        <Header>
+          <Left />
+          <Body>
+            <Title>Storybook</Title>
+          </Body>
+          <Right onPress={this.submit}>
+            <Button transparent>
+              <Icon name="arrow-forward" />
+            </Button>
+          </Right>
+        </Header>
+        <Content>
+          <Form>
+            <Item last error={hasError}>
+              <Icon active name="person" style={{ paddingTop: 5 }} />
+              <Input
+                placeholder="Username"
+                onChangeText={username => this.setState({ username })}
+                value={this.state.username}
+              />
+              {hasError && <Icon name="alert" />}
+            </Item>
+            <Button block style={{ margin: 15 }} onPress={this.submit}>
+              <Text>Submit</Text>
+            </Button>
+          </Form>
+        </Content>
+      </Container>
+    );
+  }
+}
 
 export default Login;
