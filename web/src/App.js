@@ -1,21 +1,37 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Menu, Container } from "semantic-ui-react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+import Login from "./login";
+import Dashboard from "./dashboard";
+
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Menu fixed="top" inverted>
+        <Container>
+          <Menu.Item as="a" header>
+            Storybook
+          </Menu.Item>
+        </Container>
+      </Menu>
+      <Container text style={{ marginTop: "7em" }}>
+        <Route
+          exact
+          path="/"
+          render={({ history }) => (
+            <Login onSubmit={username => history.push(`/app/${username}`)} />
+          )}
+        />
+        <Route
+          path="/app/:username"
+          render={props => (
+            <Dashboard {...props} logout={() => props.history.push("/")} />
+          )}
+        />
+      </Container>
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

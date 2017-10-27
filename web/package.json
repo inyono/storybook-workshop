@@ -18,13 +18,15 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "semantic-ui-react": "^0.75.1"
   },
   "devDependencies": {
-    "prettier": "^1.7.4",
-    "@storybook/react": "^3.2.13",
     "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13"
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/react": "^3.2.13",
+    "prettier": "^1.7.4"
   },
   "private": true
 }
